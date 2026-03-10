@@ -4,11 +4,10 @@ import hashlib
 import json
 import os
 import sys
-import time
 from datetime import datetime, timezone
+from typing import List, Tuple
 
 import requests
-
 
 API_URL_DEFAULT = "https://jsonplaceholder.typicode.com/todos/1"
 ART_DIR = "artifacts/day1"
@@ -38,7 +37,6 @@ def sha256_text(text: str) -> str:
 
 
 def dump_json_deterministic(obj, path: str) -> str:
-    # Детерминированный формат: сортировка ключей + indent=2 + перевод строки в конце
     text = json.dumps(obj, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
@@ -50,7 +48,7 @@ def load_json(path: str):
         return json.load(f)
 
 
-def validate_payload(payload: dict) -> tuple[bool, list[str]]:
+def validate_payload(payload: dict) -> Tuple[bool, List[str]]:
     errors = []
     for k, v in EXPECTED.items():
         if k not in payload:
@@ -60,16 +58,23 @@ def validate_payload(payload: dict) -> tuple[bool, list[str]]:
     return (len(errors) == 0), errors
 
 
-def fetch_online(url: str, timeout: int = 10) -> tuple[int, dict]:
+def fetch_online(url: str, timeout: int = 10) -> Tuple[int, dict]:
     r = requests.get(url, timeout=timeout)
     status = r.status_code
     payload = r.json()
     return status, payload
 
 
-def build_summary(student_token: str, student_name: str, student_group: str,
-                  url: str, status_code: int, validation_passed: bool,
-                  validation_errors: list[str], response_sha256: str) -> dict:
+def build_summary(
+    student_token: str,
+    student_name: str,
+    student_group: str,
+    url: str,
+    status_code: int,
+    validation_passed: bool,
+    validation_errors: List[str],
+    response_sha256: str,
+) -> dict:
     return {
         "schema_version": SUMMARY_SCHEMA_VERSION,
         "generated_utc": datetime.now(timezone.utc).isoformat(),
@@ -88,15 +93,18 @@ def build_summary(student_token: str, student_name: str, student_group: str,
         "run": {
             "python": sys.version.split()[0],
             "platform": sys.platform,
-        }
+        },
     }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", default=API_URL_DEFAULT)
-    parser.add_argument("--offline", action="store_true",
-                        help="Use cached response.json, do not call network")
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="Use cached response.json, do not call network",
+    )
     args = parser.parse_args()
 
     os.makedirs(ART_DIR, exist_ok=True)
@@ -106,29 +114,32 @@ def main() -> int:
     student_group = os.getenv("STUDENT_GROUP", "").strip()
 
     if not student_token or not student_name or not student_group:
-        print("ERROR: set STUDENT_TOKEN, STUDENT_NAME, STUDENT_GROUP in environment (.env).", file=sys.stderr)
+        print(
+            "ERROR: set STUDENT_TOKEN, STUDENT_NAME, STUDENT_GROUP in environment (.env).",
+            file=sys.stderr,
+        )
         return 3
 
     url = args.url
     try:
         if args.offline:
             payload = load_json(RESPONSE_PATH)
-            status_code = 200  # cached
+            status_code = 200
             log("OFFLINE mode: loaded cached response.json")
         else:
             log(f"ONLINE mode: GET {url}")
             status_code, payload = fetch_online(url)
-            # Сохраняем детерминированно
             dump_json_deterministic(payload, RESPONSE_PATH)
 
         ok, errors = validate_payload(payload)
 
-        # Хэш считаем от сохранённого "детерминированного" текста файла
         if os.path.exists(RESPONSE_PATH):
             with open(RESPONSE_PATH, "r", encoding="utf-8") as f:
                 response_text = f.read()
         else:
-            response_text = json.dumps(payload, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
+            response_text = json.dumps(
+                payload, ensure_ascii=False, sort_keys=True, indent=2
+            ) + "\n"
 
         resp_sha = sha256_text(response_text)
 
@@ -138,7 +149,7 @@ def main() -> int:
             student_group=student_group,
             url=url,
             status_code=status_code,
-            validation_passed=ok and status_code == 200,
+            validation_passed=(ok and status_code == 200),
             validation_errors=errors if status_code == 200 else ["http_status_not_200"],
             response_sha256=resp_sha,
         )
