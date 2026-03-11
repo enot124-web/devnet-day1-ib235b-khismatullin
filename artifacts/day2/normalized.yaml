@@ -1,0 +1,12 @@
+computed:
+  title_len: 18
+student:
+  group: IB235B
+  name: Khismatullin
+  token: D1-IB-23-5b-26-CE25
+  token_hash8: 6d934724
+todo:
+  completed: false
+  id: 1
+  title: delectus aut autem
+  userId: 1
