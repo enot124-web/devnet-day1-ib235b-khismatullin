@@ -1,0 +1,22 @@
+*   5c5ae94 (HEAD -> master, origin/master) Resolve README conflict (Day2)
+|\  
+| * 3b8b041 (origin/feature/day2-readme-B, feature/day2-readme-B) update readme.md B
+* | e6c957a (origin/feature/day2-readme-A, feature/day2-readme-A) update readme.md A
+|/  
+* 870c085 add pr link
+| * 6276eb3 (origin/feature/day2-dataformats, feature/day2-dataformats) add day2 generated artifacts
+| * fcb5838 add day2 generator test
+| * ba90b80 add day2 summary schema
+| * cf53cb0 implement day2 data formats generator
+|/  
+* 6a945d3 add base readme
+* bde8236 prepare day2 files and dependencies
+* 7a2d5a1 update day1
+* c3b7947 add report.md
+* 72998a0 docs: add day1 artifacts and execution results
+* fbfe002 fix day1_api_hello
+* 17dc87f add unit test day1
+* 6ec6ada add json schema for day1 summary
+* 8d3d5f1 implement day1 hello api script
+* 87cc0b0 add env example and Python dependencies
+* a5f6e8a create day1 project structure
