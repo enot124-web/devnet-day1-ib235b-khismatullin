@@ -55,7 +55,7 @@
 2 passed in 0.57s
 
 ## 6) What i learned
-...
+Сегодня я повторил работу с Git и ветками, изучил преобразование данных в JSON, YAML, XML и CSV, а также автоматическую проверку скриптов с помощью pytest и schema.
 
 ## 7) Problem and fixes
 Problem: При запуске скрипта day2_data_formats.py возникла ошибка ModuleNotFoundError: No module named 'yaml', потому что в виртуальном окружении не был установлен PyYAML.
