@@ -1,4 +1,6 @@
 # DevNet Sprint
 
-## Progress - Day2 A
+## Progress
 - Day 1 completed
+- Day2 A update
+- Day2 B update
