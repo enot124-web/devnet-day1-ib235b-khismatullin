@@ -1,0 +1,41 @@
+{
+  "count": 7,
+  "items": [
+    {
+      "author": "Mark A. Sportack",
+      "id": 0,
+      "title": "IP Routing Fundamentals"
+    },
+    {
+      "author": "Stef Maruch Aahz Maruch",
+      "id": 1,
+      "title": "Python for Dummies"
+    },
+    {
+      "author": "Cisco Systems Inc.",
+      "id": 2,
+      "title": "Linux for Networkers"
+    },
+    {
+      "author": "Cisco Systems Inc.",
+      "id": 3,
+      "title": "NetAcad: 20 Years Of Online-Learning"
+    },
+    {
+      "author": "Pingvin Student",
+      "id": 4,
+      "title": "REST API Notes"
+    },
+    {
+      "author": "Pingvin Student",
+      "id": 5,
+      "title": "Python for API Practice"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 5026,
+      "title": "My DevNet Book 6d934724"
+    }
+  ],
+  "status_code": 200
+}

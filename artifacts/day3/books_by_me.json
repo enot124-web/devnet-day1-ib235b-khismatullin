@@ -1,0 +1,30 @@
+{
+  "count": 4,
+  "items": [
+    {
+      "author": "Khismatullin",
+      "id": 5026,
+      "isbn": "978-266d934724",
+      "title": "My DevNet Book 6d934724"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 11200,
+      "isbn": "978-0-9771439-0-0",
+      "title": "Secured user-facing methodology [6d934724]"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 11201,
+      "isbn": "978-1-257-89427-7",
+      "title": "Progressive directional open system [6d934724]"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 11202,
+      "isbn": "978-1-09-654696-2",
+      "title": "Public-key client-driven superstructure [6d934724]"
+    }
+  ],
+  "status_code": 200
+}

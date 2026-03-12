@@ -1,0 +1,15 @@
+{
+  "api_key_sha256": "e82f866bd98f47db30e5c67a0079d671bcfa21fc906141b33a9639ff1f3264e6",
+  "request": {
+    "author": "Khismatullin",
+    "id": 5026,
+    "isbn": "978-266d934724",
+    "title": "My DevNet Book 6d934724"
+  },
+  "response": {
+    "author": null,
+    "id": null,
+    "title": null
+  },
+  "status_code": 200
+}

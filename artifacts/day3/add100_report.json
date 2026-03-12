@@ -1,0 +1,45 @@
+{
+  "added_fail": 0,
+  "added_ok": 100,
+  "api_key_sha256": "e82f866bd98f47db30e5c67a0079d671bcfa21fc906141b33a9639ff1f3264e6",
+  "author_used": "Khismatullin",
+  "count_requested": 100,
+  "generated_utc": "2026-03-12T06:48:04.770605+00:00",
+  "id_range": [
+    11200,
+    11299
+  ],
+  "sample_books": [
+    {
+      "author": "Khismatullin",
+      "id": 11200,
+      "isbn": "978-0-9771439-0-0",
+      "title": "Secured user-facing methodology [6d934724]"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 11201,
+      "isbn": "978-1-257-89427-7",
+      "title": "Progressive directional open system [6d934724]"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 11202,
+      "isbn": "978-1-09-654696-2",
+      "title": "Public-key client-driven superstructure [6d934724]"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 11203,
+      "isbn": "978-1-4632-8934-8",
+      "title": "Quality-focused asynchronous frame [6d934724]"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 11204,
+      "isbn": "978-0-582-44258-0",
+      "title": "Horizontal 5thgeneration orchestration [6d934724]"
+    }
+  ],
+  "tag": "6d934724"
+}

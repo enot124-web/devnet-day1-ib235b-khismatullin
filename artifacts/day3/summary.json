@@ -1,0 +1,34 @@
+{
+  "artifacts_sha256": {
+    "add100_report": "fda9d45af17bbec62e2978969dcda56eb45bf06bbd3b284c0d5f80b7d37cdb48",
+    "books_before": "caef4c8ac090fabbc9547a9dedd71cb2db9ea5033f376d67292e360eef5ad670",
+    "books_by_me": "98505cdb4ef979d53338a2e9178baac1c9ddb44c638951530a76e836267da8c8",
+    "books_sorted_isbn": "d279b392a5d02a18991203b628cbec063576c0727d5bdc7b10a4cfb05603b6ca",
+    "curl_get_books": "7b2d2daa9acf483c3fabf6669daceb2361d6ad2637b42b916153ff80d6133ae4",
+    "curl_get_books_isbn": "66c71d6abb780807d4b5ec473d4b81148b08819c1038da817019e9f6377b6874",
+    "curl_get_books_sorted": "a7eb24d6030dcecc33ac65226fded3c01677ed752ef5cc6bb48aaaa42a24c303",
+    "mybook_post": "584db0463e0563b01e0a73306da50647cfd98b0eba1b572e319ab3a93f063436",
+    "postman_collection": "0d3041103e6e49b4685e16cf8f8db31443aa8deca997745f519910e859116fcc",
+    "postman_environment": "4b9e0b97990725fb11b2dd7d4ff727d33305375d100aaf5ae9f9da5dd336e91d"
+  },
+  "generated_utc": "2026-03-12T06:48:36.319890+00:00",
+  "lab": {
+    "apihost": "http://library.demo.local",
+    "must_use": {
+      "api_key_header": "X-API-KEY",
+      "books_endpoint": "http://library.demo.local/api/v1/books",
+      "login_endpoint": "http://library.demo.local/api/v1/loginViaBasic"
+    }
+  },
+  "schema_version": "3.1",
+  "student": {
+    "group": "IB235B",
+    "name": "Khismatullin",
+    "token": "D1-IB-23-5b-26-CE25",
+    "token_hash8": "6d934724"
+  },
+  "validation": {
+    "must_have_added_100": true,
+    "must_have_mybook_title_contains_token_hash8": true
+  }
+}

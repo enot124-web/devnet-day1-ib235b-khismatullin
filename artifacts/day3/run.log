@@ -1,0 +1,9 @@
+2026-03-12T06:47:13.506767+00:00Z GET /books before: status=200 count=6
+2026-03-12T06:47:13.509494+00:00Z GET /books sorted+isbn: status=200 count=6
+2026-03-12T06:47:13.512535+00:00Z POST /loginViaBasic OK (api key received)
+2026-03-12T06:47:13.515752+00:00Z POST /books mybook: status=200 id=5026
+2026-03-12T06:48:04.474476+00:00Z GET /books before: status=200 count=7
+2026-03-12T06:48:04.480301+00:00Z GET /books sorted+isbn: status=200 count=7
+2026-03-12T06:48:04.483088+00:00Z POST /loginViaBasic OK (api key received)
+2026-03-12T06:48:04.487819+00:00Z POST /books mybook: status=200 id=5026
+2026-03-12T06:48:04.770583+00:00Z GET /books?author=me: status=200 count=4

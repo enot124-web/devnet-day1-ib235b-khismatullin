@@ -1,0 +1,46 @@
+{
+  "count": 7,
+  "items": [
+    {
+      "author": "Cisco Systems Inc.",
+      "id": 2,
+      "isbn": "000-0000000123",
+      "title": "Linux for Networkers"
+    },
+    {
+      "author": "Cisco Systems Inc.",
+      "id": 3,
+      "isbn": "000-0000001123",
+      "title": "NetAcad: 20 Years Of Online-Learning"
+    },
+    {
+      "author": "Khismatullin",
+      "id": 5026,
+      "isbn": "978-266d934724",
+      "title": "My DevNet Book 6d934724"
+    },
+    {
+      "author": "Mark A. Sportack",
+      "id": 0,
+      "isbn": "978-1578700714",
+      "title": "IP Routing Fundamentals"
+    },
+    {
+      "author": "Pingvin Student",
+      "id": 4,
+      "title": "REST API Notes"
+    },
+    {
+      "author": "Pingvin Student",
+      "id": 5,
+      "title": "Python for API Practice"
+    },
+    {
+      "author": "Stef Maruch Aahz Maruch",
+      "id": 1,
+      "isbn": "978-0471778646",
+      "title": "Python for Dummies"
+    }
+  ],
+  "status_code": 200
+}

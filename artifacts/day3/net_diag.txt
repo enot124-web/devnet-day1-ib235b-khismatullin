@@ -1,0 +1,8 @@
+{
+  "apihost": "http://library.demo.local",
+  "generated_utc": "2026-03-12T06:48:04.464343+00:00",
+  "who": {
+    "group": "IB235B",
+    "name": "Khismatullin"
+  }
+}
