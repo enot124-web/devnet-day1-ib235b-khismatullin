@@ -1,1 +1,29 @@
-Jenkins could not start in this VM due to thread/resource limits.
+Started by user Khismatullin
+
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/TestAppJob
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/TestAppJob/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/enot124-web/devnet-day1-ib235b-khismatullin # timeout=10
+Fetching upstream changes from https://github.com/enot124-web/devnet-day1-ib235b-khismatullin
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/enot124-web/devnet-day1-ib235b-khismatullin +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision a945c7adb99e8b1406e39c19867d46027f515bbf (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a945c7adb99e8b1406e39c19867d46027f515bbf # timeout=10
+Commit message: "update schemas day4"
+ > git rev-list --no-walk f33d2f005889a1c5385d366b781dc84d711def08 # timeout=10
+[TestAppJob] $ /bin/sh -xe /tmp/jenkins542765142513675527.sh
++ cd /var/jenkins_home/workspace/TestAppJob
++ test -f src/day4_summary_builder.py
++ test -f schemas/day4_summary.schema.json
++ test -f tests/test_day4_labs.py
++ test -f artifacts/day4/docker/sampleapp_curl.txt
++ echo Test step completed
+Test step completed
+Finished: SUCCESS
+
