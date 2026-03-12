@@ -1,0 +1,5 @@
+INSTALL WARNING: User:  missing rw permissions on JENKINS_HOME: /var/jenkins_home
+[0.017s][warning][os,thread] Failed to start thread "VM Periodic Task Thread" - pthread_create failed (EPERM) for attributes: stacksize: 1024k, guardsize: 4k, detached.
+[0.038s][warning][os,thread] Failed to start thread "VM Thread" - pthread_create failed (EPERM) for attributes: stacksize: 1024k, guardsize: 4k, detached.
+Error occurred during initialization of VM
+Cannot create VM thread. Out of system resources.

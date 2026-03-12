@@ -1,0 +1,50 @@
+Sending build context to Docker daemon  6.656kB
+Step 1/7 : FROM python:3.11-slim
+ ---> 7c68b5683872
+Step 2/7 : RUN pip install --no-cache-dir --progress-bar off flask
+ ---> Running in 967d5777e1f3
+Collecting flask
+  Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting blinker>=1.9.0 (from flask)
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from flask)
+  Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.2.0 (from flask)
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from flask)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from flask)
+  Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting werkzeug>=3.1.0 (from flask)
+  Downloading werkzeug-3.1.6-py3-none-any.whl.metadata (4.0 kB)
+Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading click-8.3.1-py3-none-any.whl (108 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading werkzeug-3.1.6-py3-none-any.whl (225 kB)
+Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, flask
+Successfully installed blinker-1.9.0 click-8.3.1 flask-3.1.3 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.6
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91m
+[notice] A new release of pip is available: 24.0 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+[0mRemoving intermediate container 967d5777e1f3
+ ---> 65927f14b67f
+Step 3/7 : COPY ./static /home/myapp/static/
+ ---> ad866cc3383c
+Step 4/7 : COPY ./templates /home/myapp/templates/
+ ---> 6972c743f3da
+Step 5/7 : COPY sample_app.py /home/myapp/
+ ---> acf8e083af77
+Step 6/7 : EXPOSE 5050
+ ---> Running in f7c2dc2558b1
+Removing intermediate container f7c2dc2558b1
+ ---> 6fc1940f68e4
+Step 7/7 : CMD ["python3", "/home/myapp/sample_app.py"]
+ ---> Running in e7b0afd3a473
+Removing intermediate container e7b0afd3a473
+ ---> e615ec0569ab
+Successfully built e615ec0569ab
+Successfully tagged sampleapp:day4

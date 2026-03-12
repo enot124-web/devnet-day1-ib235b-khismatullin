@@ -1,0 +1,6 @@
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                      PORTS                    NAMES
+f39bea45da6b        jenkins/jenkins:lts   "/usr/bin/tini -- /u…"   2 minutes ago       Exited (1) 2 minutes ago                             jenkins
+c443d94a562f        sampleapp:day4        "python3 /home/myapp…"   10 minutes ago      Up 10 minutes               0.0.0.0:5050->5050/tcp   samplerunning
+ba115430b252        d8f278e9e42a          "/bin/sh -c 'pip ins…"   34 minutes ago      Exited (2) 33 minutes ago                            interesting_ganguly
+85e3b6dea44e        d8f278e9e42a          "/bin/sh -c 'pip ins…"   34 minutes ago      Exited (2) 34 minutes ago                            affectionate_mestorf
+de5876dfeedc        d8f278e9e42a          "/bin/sh -c 'pip ins…"   36 minutes ago      Exited (2) 36 minutes ago                            exciting_euclid
