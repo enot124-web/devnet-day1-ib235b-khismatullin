@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "36764a62-76fa-46e0-9dc8-e7c4c49b1056",
+		"name": "Day5",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "53132693",
+		"_collection_link": "https://rashidkhismatullin002-8943734.postman.co/workspace/%D0%A0%D0%B0%D1%88%D0%B8%D0%B4-%D0%A5%D0%B8%D1%81%D0%BC%D0%B0%D1%82%D1%83%D0%BB%D0%BB%D0%B8%D0%BD's-Workspace~cb6a19d6-aae8-4c6c-86e5-a68137e36ee8/collection/53132693-36764a62-76fa-46e0-9dc8-e7c4c49b1056?action=share&source=collection_link&creator=53132693"
+	},
+	"item": [
+		{
+			"name": "Post Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"cisco\",\n  \"password\": \"cisco123!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:58000/api/v1/ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "58000",
+					"path": [
+						"api",
+						"v1",
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "network devices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "NC-146-7b201af9dee1450390e9-nbi",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:58000/api/v1/network-device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "58000",
+					"path": [
+						"api",
+						"v1",
+						"network-device"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
